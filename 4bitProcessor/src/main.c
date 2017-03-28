@@ -1,8 +1,19 @@
 #include <SI_EFM8BB3_Register_Enums.h> // SFR declarations
 #include <stdio.h>
 #include <stdlib.h>
+#include "InitDevice.h"
 
 #define TIME 1000 //appx 0.5secs
+
+extern void WDT_0_enter_DefaultMode_from_RESET(void) {
+	// $[WDTCN - Watchdog Timer Control]
+	SFRPAGE = 0x00;
+	//Disable Watchdog with key sequence
+	WDTCN = 0xDE; //First key
+	WDTCN = 0xAD; //Second key
+	// [WDTCN - Watchdog Timer Control]$
+
+}
 
 //GPIO & SFR definitions
 SI_SBIT(LED0, SFR_P1, 4);                  // P1.4 LED0	GREEN
@@ -18,7 +29,7 @@ SI_SBIT(OP1, SFR_P1, 1);   				   // P1.1 OP1
 SI_SBIT(CLK, SFR_P1, 3);				   // P1.3 CLK
 
 //TEMP REGISTER
-SI_SBIT(T0, SFR_P3, 0);   				   // P3.0 LSB
+SI_SBIT(T0, SFR_P3, 4);   				   // P3.4 LSB
 SI_SBIT(T1, SFR_P3, 1);   				   // P3.1
 SI_SBIT(T2, SFR_P3, 2);   				   // P3.2
 SI_SBIT(T3, SFR_P3, 3);   				   // P3.3 MSB
@@ -131,17 +142,67 @@ void uTemp(int num){
 	blink(0,1);
 }
 
+void slowDownCount(int num){
+	int i;
+	for(i=num;i>=0; i--){
+		delay(100);
+		op(0);
+		clk();
+		uTemp(i);
+		op(2);
+		clk();
+
+		delay(100);
+	}
+}
+
+void slowUpCount(int num){
+	int i;
+	for(i=0;i<=num; i++){
+		delay(100);
+		op(0);
+		clk();
+		uTemp(i);
+		op(2);
+		clk();
+
+		delay(100);
+	}
+}
+
 int main(void) {
-	XBR2 |= 0x40; //Enable Crossbar so we can easily turn pins on and off.
+	WDT_0_enter_DefaultMode_from_RESET();
+	XBR2 |= 0x40; //Enable Crossbar so we can easily turn pins on and off
+
 
 	op(0);
-	uTemp(1);
 	clk();
 
 	while (1) {
 		if(BTN0==0){
-			op(3);
+			op(0);
 			clk();
+
+			uTemp(7);
+			op(2);
+			clk();
+			delay(100);
+			op(0);
+			clk();
+
+			uTemp(8);
+			op(2);
+			clk();
+			delay(100);
+			op(0);
+			clk();
+
+			uTemp(7);
+			op(2);
+			clk();
+			delay(100);
+
+
 
 			delay(100);
 		}

@@ -1,4 +1,4 @@
-C51 COMPILER V9.53.0.0   MAIN                                                              03/26/2017 18:24:35 PAGE 1   
+C51 COMPILER V9.53.0.0   MAIN                                                              03/27/2017 20:59:35 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE MAIN
@@ -15,165 +15,230 @@ line level    source
    1          #include <SI_EFM8BB3_Register_Enums.h> // SFR declarations
    2          #include <stdio.h>
    3          #include <stdlib.h>
-   4          
-   5          #define TIME 1000 //appx 0.5secs
-   6          
-   7          //GPIO & SFR definitions
-   8          SI_SBIT(LED0, SFR_P1, 4);                  // P1.4 LED0 GREEN
-   9          SI_SBIT(LED1, SFR_P1, 5);                  // P1.5 LED1 BLUE
-  10          SI_SBIT(LED2, SFR_P1, 6);                  // P1.6 LED2 RED
-  11          
-  12          SI_SBIT(BTN0, SFR_P0, 2);                  // P0.2 BTN0
-  13          SI_SBIT(BTN1, SFR_P0, 3);                  // P0.3 BTN1
-  14          
-  15          SI_SBIT(OP0, SFR_P1, 0);                                   // P1.0 OP0
-  16          SI_SBIT(OP1, SFR_P1, 1);                                   // P1.1 OP1
+   4          #include "InitDevice.h"
+*** WARNING C318 IN LINE 4 OF /Users/s150563/Documents/Cooper/Semester 4/Comp_Arch/ECE251-Project1/4bitProcessor/src/mai
+             -n.c: can't open file 'InitDevice.h'
+   5          
+   6          #define TIME 1000 //appx 0.5secs
+   7          
+   8          extern void WDT_0_enter_DefaultMode_from_RESET(void) {
+   9   1              // $[WDTCN - Watchdog Timer Control]
+  10   1              SFRPAGE = 0x00;
+  11   1              //Disable Watchdog with key sequence
+  12   1              WDTCN = 0xDE; //First key
+  13   1              WDTCN = 0xAD; //Second key
+  14   1              // [WDTCN - Watchdog Timer Control]$
+  15   1      
+  16   1      }
   17          
-  18          SI_SBIT(CLK, SFR_P1, 3);                                   // P1.3 CLK
-  19          
-  20          //TEMP REGISTER
-  21          SI_SBIT(T0, SFR_P3, 0);                                    // P3.0 LSB
-  22          SI_SBIT(T1, SFR_P3, 1);                                    // P3.1
-  23          SI_SBIT(T2, SFR_P3, 2);                                    // P3.2
-  24          SI_SBIT(T3, SFR_P3, 3);                                    // P3.3 MSB
+  18          //GPIO & SFR definitions
+  19          SI_SBIT(LED0, SFR_P1, 4);                  // P1.4 LED0 GREEN
+  20          SI_SBIT(LED1, SFR_P1, 5);                  // P1.5 LED1 BLUE
+  21          SI_SBIT(LED2, SFR_P1, 6);                  // P1.6 LED2 RED
+  22          
+  23          SI_SBIT(BTN0, SFR_P0, 2);                  // P0.2 BTN0
+  24          SI_SBIT(BTN1, SFR_P0, 3);                  // P0.3 BTN1
   25          
-  26          //time delay of default TIME seconds
-  27          void delay(int n) {
-  28   1              uint16_t i;
-  29   1              int j;
-  30   1              for(j=0;j<n;j++){
-  31   2                      for (i=0; i<TIME; i++);
-  32   2              }
-  33   1      }
-  34          
-  35          //blinks one of 3 LEDs n times
-  36          void blink(int LED, int n){
-  37   1              if(n<=0){
-  38   2                      printf("nfERROR: blink() arg not valid n\n"); //cannot blink negative times (nf: non-fatal)
-  39   2              } else{
-  40   2                      switch(LED){
-  41   3                              case 0:
-  42   3                                      while(n>0){
-  43   4                                              LED0 = 0;
-  44   4                                              delay(1);
-  45   4                                              LED0 = 1;
-  46   4                                              delay(1);
-  47   4                                              n--;
-  48   4                                      }
-  49   3                                      break;
-  50   3                              case 1:
-  51   3                                      while(n>0){
-C51 COMPILER V9.53.0.0   MAIN                                                              03/26/2017 18:24:35 PAGE 2   
+  26          SI_SBIT(OP0, SFR_P1, 0);                                   // P1.0 OP0
+  27          SI_SBIT(OP1, SFR_P1, 1);                                   // P1.1 OP1
+  28          
+  29          SI_SBIT(CLK, SFR_P1, 3);                                   // P1.3 CLK
+  30          
+  31          //TEMP REGISTER
+  32          SI_SBIT(T0, SFR_P3, 4);                                    // P3.4 LSB
+  33          SI_SBIT(T1, SFR_P3, 1);                                    // P3.1
+  34          SI_SBIT(T2, SFR_P3, 2);                                    // P3.2
+  35          SI_SBIT(T3, SFR_P3, 3);                                    // P3.3 MSB
+  36          
+  37          //time delay of default TIME seconds
+  38          void delay(int n) {
+  39   1              uint16_t i;
+  40   1              int j;
+  41   1              for(j=0;j<n;j++){
+  42   2                      for (i=0; i<TIME; i++);
+  43   2              }
+  44   1      }
+  45          
+  46          //blinks one of 3 LEDs n times
+  47          void blink(int LED, int n){
+  48   1              if(n<=0){
+  49   2                      printf("nfERROR: blink() arg not valid n\n"); //cannot blink negative times (nf: non-fatal)
+C51 COMPILER V9.53.0.0   MAIN                                                              03/27/2017 20:59:35 PAGE 2   
 
-  52   4                                              LED1 = 0;
-  53   4                                              delay(1);
-  54   4                                              LED1 = 1;
+  50   2              } else{
+  51   2                      switch(LED){
+  52   3                              case 0:
+  53   3                                      while(n>0){
+  54   4                                              LED0 = 0;
   55   4                                              delay(1);
-  56   4                                              n--;
-  57   4                                      }
-  58   3                                      break;
-  59   3                              case 2:
-  60   3                                      while(n>0){
-  61   4                                              LED2 = 0;
-  62   4                                              delay(1);
-  63   4                                              LED2 = 1;
+  56   4                                              LED0 = 1;
+  57   4                                              delay(1);
+  58   4                                              n--;
+  59   4                                      }
+  60   3                                      break;
+  61   3                              case 1:
+  62   3                                      while(n>0){
+  63   4                                              LED1 = 0;
   64   4                                              delay(1);
-  65   4                                              n--;
-  66   4                                      }
-  67   3                                      break;
-  68   3                      }
-  69   2              }
-  70   1      }
-  71          
-  72          //clock signal 1 pulse based on delay()
-  73          void clk(){
-  74   1              CLK = 0;
-  75   1              delay(1);
-  76   1              CLK = 1;
-  77   1              delay(1);
-  78   1              CLK = 0;
-  79   1              delay(1);
-  80   1      
-  81   1              blink(2,1); //visual aid
-  82   1      }
-  83          
-  84          //OP code translation (from dec. to GPIOpins) (valid ops: 0,1,2,3)
-  85          void op(int opcode){
-  86   1              switch(opcode){
-  87   2                      case 0:                 //ZEROS
-  88   2                              OP0=0;
-  89   2                              OP1=0;
-  90   2                              break;
-  91   2                      case 1:                 //AND
-  92   2                              OP0=1;
-  93   2                              OP1=0;
-  94   2                              break;
-  95   2                      case 2:                 //OR
-  96   2                              OP0=0;
-  97   2                              OP1=1;
-  98   2                              break;
-  99   2                      case 3:                 //ADDITION
- 100   2                              OP0=1;
- 101   2                              OP1=1;
- 102   2                              break;
- 103   2              }
- 104   1      
- 105   1              blink(1,1);             //for visual aid
- 106   1      }
- 107          
- 108          int* dec2bin(int c){
- 109   1              int *arr = malloc(4);
- 110   1      
- 111   1              int i = 0;
- 112   1              for(i = 31; i >= 0; i--){
- 113   2                      if((c & (1 << i)) != 0){
- 114   3                              arr[i] = 1;
-C51 COMPILER V9.53.0.0   MAIN                                                              03/26/2017 18:24:35 PAGE 3   
+  65   4                                              LED1 = 1;
+  66   4                                              delay(1);
+  67   4                                              n--;
+  68   4                                      }
+  69   3                                      break;
+  70   3                              case 2:
+  71   3                                      while(n>0){
+  72   4                                              LED2 = 0;
+  73   4                                              delay(1);
+  74   4                                              LED2 = 1;
+  75   4                                              delay(1);
+  76   4                                              n--;
+  77   4                                      }
+  78   3                                      break;
+  79   3                      }
+  80   2              }
+  81   1      }
+  82          
+  83          //clock signal 1 pulse based on delay()
+  84          void clk(){
+  85   1              CLK = 0;
+  86   1              delay(1);
+  87   1              CLK = 1;
+  88   1              delay(1);
+  89   1              CLK = 0;
+  90   1              delay(1);
+  91   1      
+  92   1              blink(2,1); //visual aid
+  93   1      }
+  94          
+  95          //OP code translation (from dec. to GPIOpins) (valid ops: 0,1,2,3)
+  96          void op(int opcode){
+  97   1              switch(opcode){
+  98   2                      case 0:                 //ZEROS
+  99   2                              OP0=0;
+ 100   2                              OP1=0;
+ 101   2                              break;
+ 102   2                      case 1:                 //AND
+ 103   2                              OP0=1;
+ 104   2                              OP1=0;
+ 105   2                              break;
+ 106   2                      case 2:                 //OR
+ 107   2                              OP0=0;
+ 108   2                              OP1=1;
+ 109   2                              break;
+ 110   2                      case 3:                 //ADDITION
+ 111   2                              OP0=1;
+ 112   2                              OP1=1;
+C51 COMPILER V9.53.0.0   MAIN                                                              03/27/2017 20:59:35 PAGE 3   
 
- 115   3                      }else{
- 116   3                              arr[i] = 0;
- 117   3                      }
- 118   2              }
- 119   1              return arr;
- 120   1      }
- 121          
- 122          void uTemp(int num){
- 123   1              int *binptr;
- 124   1              binptr = dec2bin(num);
- 125   1              T0 = *(binptr);
- 126   1              T1 = *(binptr+1);
- 127   1              T2 = *(binptr+2);
- 128   1              T3 = *(binptr+3);
- 129   1      
- 130   1              free(binptr);
- 131   1              blink(0,1);
- 132   1      }
- 133          
- 134          int main(void) {
- 135   1              XBR2 |= 0x40; //Enable Crossbar so we can easily turn pins on and off.
- 136   1      
- 137   1              op(0);
- 138   1              uTemp(1);
- 139   1              clk();
+ 113   2                              break;
+ 114   2              }
+ 115   1      
+ 116   1              blink(1,1);             //for visual aid
+ 117   1      }
+ 118          
+ 119          int* dec2bin(int c){
+ 120   1              int *arr = malloc(4);
+ 121   1      
+ 122   1              int i = 0;
+ 123   1              for(i = 31; i >= 0; i--){
+ 124   2                      if((c & (1 << i)) != 0){
+ 125   3                              arr[i] = 1;
+ 126   3                      }else{
+ 127   3                              arr[i] = 0;
+ 128   3                      }
+ 129   2              }
+ 130   1              return arr;
+ 131   1      }
+ 132          
+ 133          void uTemp(int num){
+ 134   1              int *binptr;
+ 135   1              binptr = dec2bin(num);
+ 136   1              T0 = *(binptr);
+ 137   1              T1 = *(binptr+1);
+ 138   1              T2 = *(binptr+2);
+ 139   1              T3 = *(binptr+3);
  140   1      
- 141   1              while (1) {
- 142   2                      if(BTN0==0){
- 143   3                              op(3);
- 144   3                              clk();
- 145   3      
- 146   3                              delay(100);
- 147   3                      }
- 148   2      
- 149   2              } // Spin forever
- 150   1      }
+ 141   1              free(binptr);
+ 142   1              blink(0,1);
+ 143   1      }
+ 144          
+ 145          void slowDownCount(int num){
+ 146   1              int i;
+ 147   1              for(i=num;i>=0; i--){
+ 148   2                      delay(100);
+ 149   2                      op(0);
+ 150   2                      clk();
+ 151   2                      uTemp(i);
+ 152   2                      op(2);
+ 153   2                      clk();
+ 154   2      
+ 155   2                      delay(100);
+ 156   2              }
+ 157   1      }
+ 158          
+ 159          void slowUpCount(int num){
+ 160   1              int i;
+ 161   1              for(i=0;i<=num; i++){
+ 162   2                      delay(100);
+ 163   2                      op(0);
+ 164   2                      clk();
+ 165   2                      uTemp(i);
+ 166   2                      op(2);
+ 167   2                      clk();
+ 168   2      
+ 169   2                      delay(100);
+ 170   2              }
+ 171   1      }
+ 172          
+ 173          int main(void) {
+ 174   1              WDT_0_enter_DefaultMode_from_RESET();
+ 175   1              XBR2 |= 0x40; //Enable Crossbar so we can easily turn pins on and off
+C51 COMPILER V9.53.0.0   MAIN                                                              03/27/2017 20:59:35 PAGE 4   
+
+ 176   1      
+ 177   1      
+ 178   1              op(0);
+ 179   1              clk();
+ 180   1      
+ 181   1              while (1) {
+ 182   2                      if(BTN0==0){
+ 183   3                              op(0);
+ 184   3                              clk();
+ 185   3      
+ 186   3                              uTemp(7);
+ 187   3                              op(2);
+ 188   3                              clk();
+ 189   3                              delay(100);
+ 190   3                              op(0);
+ 191   3                              clk();
+ 192   3      
+ 193   3                              uTemp(8);
+ 194   3                              op(2);
+ 195   3                              clk();
+ 196   3                              delay(100);
+ 197   3                              op(0);
+ 198   3                              clk();
+ 199   3      
+ 200   3                              uTemp(7);
+ 201   3                              op(2);
+ 202   3                              clk();
+ 203   3                              delay(100);
+ 204   3      
+ 205   3      
+ 206   3      
+ 207   3                              delay(100);
+ 208   3                      }
+ 209   2      
+ 210   2              } // Spin forever
+ 211   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    429    ----
+   CODE SIZE        =    624    ----
    CONSTANT SIZE    =     34    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
-   DATA SIZE        =   ----       6
+   DATA SIZE        =   ----      12
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
    EDATA SIZE       =   ----    ----
@@ -183,4 +248,4 @@ MODULE INFORMATION:   STATIC OVERLAYABLE
 END OF MODULE INFORMATION.
 
 
-C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)
