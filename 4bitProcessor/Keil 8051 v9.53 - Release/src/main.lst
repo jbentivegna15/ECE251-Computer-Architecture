@@ -1,4 +1,4 @@
-C51 COMPILER V9.53.0.0   MAIN                                                              03/27/2017 20:59:35 PAGE 1   
+C51 COMPILER V9.53.0.0   MAIN                                                              04/02/2017 22:52:17 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE MAIN
@@ -45,7 +45,7 @@ line level    source
   29          SI_SBIT(CLK, SFR_P1, 3);                                   // P1.3 CLK
   30          
   31          //TEMP REGISTER
-  32          SI_SBIT(T0, SFR_P3, 4);                                    // P3.4 LSB
+  32          SI_SBIT(T0, SFR_P3, 0);                                    // P3.0 LSB
   33          SI_SBIT(T1, SFR_P3, 1);                                    // P3.1
   34          SI_SBIT(T2, SFR_P3, 2);                                    // P3.2
   35          SI_SBIT(T3, SFR_P3, 3);                                    // P3.3 MSB
@@ -63,7 +63,7 @@ line level    source
   47          void blink(int LED, int n){
   48   1              if(n<=0){
   49   2                      printf("nfERROR: blink() arg not valid n\n"); //cannot blink negative times (nf: non-fatal)
-C51 COMPILER V9.53.0.0   MAIN                                                              03/27/2017 20:59:35 PAGE 2   
+C51 COMPILER V9.53.0.0   MAIN                                                              04/02/2017 22:52:17 PAGE 2   
 
   50   2              } else{
   51   2                      switch(LED){
@@ -128,7 +128,7 @@ line level    source
  110   2                      case 3:                 //ADDITION
  111   2                              OP0=1;
  112   2                              OP1=1;
-C51 COMPILER V9.53.0.0   MAIN                                                              03/27/2017 20:59:35 PAGE 3   
+C51 COMPILER V9.53.0.0   MAIN                                                              04/02/2017 22:52:17 PAGE 3   
 
  113   2                              break;
  114   2              }
@@ -157,22 +157,22 @@ line level    source
  137   1              T1 = *(binptr+1);
  138   1              T2 = *(binptr+2);
  139   1              T3 = *(binptr+3);
- 140   1      
- 141   1              free(binptr);
+ 140   1              free(binptr);
+ 141   1      
  142   1              blink(0,1);
  143   1      }
  144          
  145          void slowDownCount(int num){
  146   1              int i;
  147   1              for(i=num;i>=0; i--){
- 148   2                      delay(100);
- 149   2                      op(0);
- 150   2                      clk();
- 151   2                      uTemp(i);
- 152   2                      op(2);
+ 148   2                      op(0);
+ 149   2                      clk();
+ 150   2                      uTemp(i);
+ 151   2                      op(2);
+ 152   2                      clk();
  153   2                      clk();
  154   2      
- 155   2                      delay(100);
+ 155   2                      delay(200);
  156   2              }
  157   1      }
  158          
@@ -185,56 +185,35 @@ line level    source
  165   2                      uTemp(i);
  166   2                      op(2);
  167   2                      clk();
- 168   2      
- 169   2                      delay(100);
- 170   2              }
- 171   1      }
- 172          
- 173          int main(void) {
- 174   1              WDT_0_enter_DefaultMode_from_RESET();
- 175   1              XBR2 |= 0x40; //Enable Crossbar so we can easily turn pins on and off
-C51 COMPILER V9.53.0.0   MAIN                                                              03/27/2017 20:59:35 PAGE 4   
+ 168   2                      clk();
+ 169   2      
+ 170   2                      delay(100);
+ 171   2              }
+ 172   1      }
+ 173          
+ 174          int main(void) {
+ 175   1              WDT_0_enter_DefaultMode_from_RESET(); //
+C51 COMPILER V9.53.0.0   MAIN                                                              04/02/2017 22:52:17 PAGE 4   
 
- 176   1      
+ 176   1              XBR2 |= 0x40; //Enable Crossbar so we can easily turn pins on and off
  177   1      
- 178   1              op(0);
- 179   1              clk();
- 180   1      
- 181   1              while (1) {
- 182   2                      if(BTN0==0){
- 183   3                              op(0);
- 184   3                              clk();
- 185   3      
- 186   3                              uTemp(7);
- 187   3                              op(2);
- 188   3                              clk();
- 189   3                              delay(100);
- 190   3                              op(0);
- 191   3                              clk();
- 192   3      
- 193   3                              uTemp(8);
- 194   3                              op(2);
- 195   3                              clk();
- 196   3                              delay(100);
- 197   3                              op(0);
- 198   3                              clk();
- 199   3      
- 200   3                              uTemp(7);
- 201   3                              op(2);
- 202   3                              clk();
- 203   3                              delay(100);
- 204   3      
- 205   3      
- 206   3      
- 207   3                              delay(100);
- 208   3                      }
- 209   2      
- 210   2              } // Spin forever
- 211   1      }
+ 178   1      
+ 179   1              op(0);
+ 180   1              clk();
+ 181   1              clk();
+ 182   1      
+ 183   1              while (1) {
+ 184   2                      if(BTN0==0){
+ 185   3                              slowUpCount(15);
+ 186   3                              slowDownCount(15);
+ 187   3                      }
+ 188   2      
+ 189   2              } // Spin forever
+ 190   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    624    ----
+   CODE SIZE        =    574    ----
    CONSTANT SIZE    =     34    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
