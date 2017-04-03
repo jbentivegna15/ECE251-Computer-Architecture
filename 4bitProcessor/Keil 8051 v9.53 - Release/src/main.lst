@@ -1,4 +1,4 @@
-C51 COMPILER V9.53.0.0   MAIN                                                              04/02/2017 22:52:17 PAGE 1   
+C51 COMPILER V9.53.0.0   MAIN                                                              04/03/2017 12:59:17 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE MAIN
@@ -19,7 +19,7 @@ line level    source
 *** WARNING C318 IN LINE 4 OF /Users/s150563/Documents/Cooper/Semester 4/Comp_Arch/ECE251-Project1/4bitProcessor/src/mai
              -n.c: can't open file 'InitDevice.h'
    5          
-   6          #define TIME 1000 //appx 0.5secs
+   6          #define TIME 1000
    7          
    8          extern void WDT_0_enter_DefaultMode_from_RESET(void) {
    9   1              // $[WDTCN - Watchdog Timer Control]
@@ -63,7 +63,7 @@ line level    source
   47          void blink(int LED, int n){
   48   1              if(n<=0){
   49   2                      printf("nfERROR: blink() arg not valid n\n"); //cannot blink negative times (nf: non-fatal)
-C51 COMPILER V9.53.0.0   MAIN                                                              04/02/2017 22:52:17 PAGE 2   
+C51 COMPILER V9.53.0.0   MAIN                                                              04/03/2017 12:59:17 PAGE 2   
 
   50   2              } else{
   51   2                      switch(LED){
@@ -100,11 +100,11 @@ line level    source
   82          
   83          //clock signal 1 pulse based on delay()
   84          void clk(){
-  85   1              CLK = 0;
+  85   1              CLK = 1;
   86   1              delay(1);
-  87   1              CLK = 1;
+  87   1              CLK = 0;
   88   1              delay(1);
-  89   1              CLK = 0;
+  89   1              CLK = 1;
   90   1              delay(1);
   91   1      
   92   1              blink(2,1); //visual aid
@@ -128,7 +128,7 @@ line level    source
  110   2                      case 3:                 //ADDITION
  111   2                              OP0=1;
  112   2                              OP1=1;
-C51 COMPILER V9.53.0.0   MAIN                                                              04/02/2017 22:52:17 PAGE 3   
+C51 COMPILER V9.53.0.0   MAIN                                                              04/03/2017 12:59:17 PAGE 3   
 
  113   2                              break;
  114   2              }
@@ -170,50 +170,48 @@ line level    source
  150   2                      uTemp(i);
  151   2                      op(2);
  152   2                      clk();
- 153   2                      clk();
- 154   2      
- 155   2                      delay(200);
- 156   2              }
- 157   1      }
- 158          
- 159          void slowUpCount(int num){
- 160   1              int i;
- 161   1              for(i=0;i<=num; i++){
- 162   2                      delay(100);
- 163   2                      op(0);
- 164   2                      clk();
- 165   2                      uTemp(i);
- 166   2                      op(2);
- 167   2                      clk();
- 168   2                      clk();
- 169   2      
- 170   2                      delay(100);
- 171   2              }
- 172   1      }
- 173          
- 174          int main(void) {
- 175   1              WDT_0_enter_DefaultMode_from_RESET(); //
-C51 COMPILER V9.53.0.0   MAIN                                                              04/02/2017 22:52:17 PAGE 4   
+ 153   2      
+ 154   2                      delay(200);
+ 155   2              }
+ 156   1      }
+ 157          
+ 158          void slowUpCount(int num){
+ 159   1              int i;
+ 160   1              for(i=0;i<=num; i++){
+ 161   2                      op(0);
+ 162   2                      clk();
+ 163   2                      uTemp(i);
+ 164   2                      op(2);
+ 165   2                      clk();
+ 166   2      
+ 167   2                      delay(200);
+ 168   2              }
+ 169   1      }
+ 170          
+ 171          int main(void) {
+ 172   1              WDT_0_enter_DefaultMode_from_RESET(); //
+ 173   1              XBR2 |= 0x40; //Enable Crossbar so we can easily turn pins on and off
+ 174   1      
+ 175   1      
+C51 COMPILER V9.53.0.0   MAIN                                                              04/03/2017 12:59:17 PAGE 4   
 
- 176   1              XBR2 |= 0x40; //Enable Crossbar so we can easily turn pins on and off
- 177   1      
+ 176   1              op(0);
+ 177   1              clk();
  178   1      
- 179   1              op(0);
- 180   1              clk();
- 181   1              clk();
- 182   1      
- 183   1              while (1) {
- 184   2                      if(BTN0==0){
- 185   3                              slowUpCount(15);
- 186   3                              slowDownCount(15);
- 187   3                      }
- 188   2      
- 189   2              } // Spin forever
- 190   1      }
+ 179   1              while (1) {
+ 180   2                      if(BTN0==0){
+ 181   3                              slowUpCount(15);
+ 182   3                              slowDownCount(15);
+ 183   3      
+ 184   3                              delay(200);
+ 185   3                      }
+ 186   2      
+ 187   2              } // Spin forever
+ 188   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    574    ----
+   CODE SIZE        =    561    ----
    CONSTANT SIZE    =     34    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----

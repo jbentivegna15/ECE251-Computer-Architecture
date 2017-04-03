@@ -150,7 +150,6 @@ void slowDownCount(int num){
 		uTemp(i);
 		op(2);
 		clk();
-		clk();
 
 		delay(200);
 	}
@@ -159,15 +158,13 @@ void slowDownCount(int num){
 void slowUpCount(int num){
 	int i;
 	for(i=0;i<=num; i++){
-		delay(100);
 		op(0);
 		clk();
 		uTemp(i);
 		op(2);
 		clk();
-		clk();
 
-		delay(100);
+		delay(200);
 	}
 }
 
@@ -178,12 +175,13 @@ int main(void) {
 
 	op(0);
 	clk();
-	clk();
 
 	while (1) {
 		if(BTN0==0){
 			slowUpCount(15);
 			slowDownCount(15);
+
+			delay(200);
 		}
 
 	} // Spin forever
