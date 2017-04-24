@@ -5,7 +5,6 @@
 #include "bsp.h"
 #include "InitDevice.h"
 #include "disp.h"
-#include "voltmeter.h"
 
 //---------------------------------------------------------------------------
 // main() Routine

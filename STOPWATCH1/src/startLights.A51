@@ -7,21 +7,16 @@ NAME STARTLIGHTS
 EXTRN	CODE (?C_STARTUP)
 
 ORG 300H
-DELAY2: MOV	R4, #255
+DELAY2: MOV	R4, #255 	;DELAY2 is a looped delay of 255*255 operations of decrementing registers
 NEXT: MOV R5, #255
 AGAIN: DJNZ R5, AGAIN
-DJNZ R4, NEXT
-RET
+	DJNZ R4, NEXT
+	RET
 
-
-DELAY: MOV R6, #50
+DELAY: MOV R6, #50 		;DELAY calls DELAY2 50 times
 AGAIN2: LCALL DELAY2
-DJNZ R6, AGAIN2
-RET
-
-?PR?setLightsRED?STARTLIGHTS               SEGMENT CODE
-PUBLIC	setLightsRED
-RSEG  ?PR?setLightsRED?STARTLIGHTS
+	DJNZ R6, AGAIN2
+	RET
 
 setLightsRED:
 	USING	0
@@ -30,10 +25,6 @@ setLightsRED:
 	CLR  	P1_B6
 	RET
 
-?PR?setLightsYLW?STARTLIGHTS               SEGMENT CODE
-PUBLIC	setLightsYLW
-RSEG  ?PR?setLightsYLW?STARTLIGHTS
-
 setLightsYLW:
 	USING	0
 	CLR  	P1_B4
@@ -41,20 +32,12 @@ setLightsYLW:
 	CLR  	P1_B6
 	RET
 
-?PR?setLightsGRN?STARTLIGHTS               SEGMENT CODE
-PUBLIC	setLightsGRN
-RSEG  ?PR?setLightsGRN?STARTLIGHTS
-
 setLightsGRN:
 	USING	0
 	CLR  	P1_B4
 	SETB 	P1_B5
 	SETB 	P1_B6
 	RET
-
-?PR?setLightsOFF?STARTLIGHTS               SEGMENT CODE
-PUBLIC	setLightsOFF
-RSEG  ?PR?setLightsOFF?STARTLIGHTS
 
 setLightsOFF:
 	USING	0
