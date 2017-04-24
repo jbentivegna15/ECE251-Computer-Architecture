@@ -1,4 +1,4 @@
-LX51 LINKER/LOCATER V4.66.30.0                                                          04/03/2017  12:59:17  PAGE 1
+LX51 LINKER/LOCATER V4.66.30.0                                                          04/07/2017  17:02:34  PAGE 1
 
 
 LX51 LINKER/LOCATER V4.66.30.0, INVOKED BY:
@@ -64,7 +64,7 @@ I:000020H.0 I:000020H.0 I:00002FH.7 000001H.1 BIT
 
 MEMORY MAP OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
 
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 2
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 2
 
 
 
@@ -129,7 +129,7 @@ MAIN/MAIN                                    ----- -----  ----- -----
   +--> MAIN
 
 WDT_0_ENTER_DEFAULTMODE_FROM_RESET/MAIN      ----- -----  ----- -----
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 3
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 3
 
 
 
@@ -194,7 +194,7 @@ PUBLIC SYMBOLS OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
       0000002AH   DATA     ---       ?_PRINTF517?BYTE
       0000002AH   DATA     ---       ?_PRINTF?BYTE
       0000002AH   DATA     ---       ?_SPRINTF517?BYTE
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 4
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 4
 
 
       0000002AH   DATA     ---       ?_SPRINTF?BYTE
@@ -259,7 +259,7 @@ PUBLIC SYMBOLS OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
 *SFR* 000000C3H   DATA     WORD      ADC0GT
 *SFR* 000000C4H   DATA     BYTE      ADC0GTH
 *SFR* 000000C3H   DATA     BYTE      ADC0GTL
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 5
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 5
 
 
 *SFR* 000000BEH   DATA     BYTE      ADC0H
@@ -324,7 +324,7 @@ PUBLIC SYMBOLS OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
 *SFR* 00000091H   DATA     BYTE      DAC0CF0
 *SFR* 00000092H   DATA     BYTE      DAC0CF1
 *SFR* 00000085H   DATA     BYTE      DAC0H
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 6
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 6
 
 
 *SFR* 00000084H   DATA     BYTE      DAC0L
@@ -389,7 +389,7 @@ PUBLIC SYMBOLS OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
 *SFR* 000000A8H.3 DATA     BIT       IE_ET1
 *SFR* 000000A8H.5 DATA     BIT       IE_ET2
 *SFR* 000000A8H   DATA     BIT       IE_EX0
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 7
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 7
 
 
 *SFR* 000000A8H.2 DATA     BIT       IE_EX1
@@ -454,7 +454,7 @@ PUBLIC SYMBOLS OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
 *SFR* 000000B0H   DATA     BYTE      P3
 *SFR* 000000B0H   DATA     BIT       P3_B0
 *SFR* 000000B0H.1 DATA     BIT       P3_B1
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 8
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 8
 
 
 *SFR* 000000B0H.2 DATA     BIT       P3_B2
@@ -519,7 +519,7 @@ PUBLIC SYMBOLS OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
 *SFR* 000000D0H   DATA     BIT       PSW_PARITY
 *SFR* 000000D0H.3 DATA     BIT       PSW_RS0
 *SFR* 000000D0H.4 DATA     BIT       PSW_RS1
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 9
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 9
 
 
 *SFR* 000000D1H   DATA     BYTE      REF0CN
@@ -584,7 +584,7 @@ PUBLIC SYMBOLS OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
 *SFR* 000000A3H   DATA     BYTE      SPI0DAT
 *SFR* 0000009AH   DATA     BYTE      SPI0FCN0
 *SFR* 0000009BH   DATA     BYTE      SPI0FCN1
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 10
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 10
 
 
 *SFR* 000000F7H   DATA     BYTE      SPI0FCT
@@ -649,7 +649,7 @@ PUBLIC SYMBOLS OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
 *SFR* 000000A2H   DATA     BYTE      TMR4RLL
 *SFR* 000000D4H   DATA     WORD      TMR5
 *SFR* 000000C0H   DATA     BYTE      TMR5CN0
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 11
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 11
 
 
 *SFR* 000000C0H.3 DATA     BIT       TMR5CN0_T5SPLIT
@@ -714,7 +714,7 @@ SYMBOL TABLE OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
       000000F9H   SFRSYM    DATA     WORD      PCA0
       000000E6H   SFRSYM    DATA     BYTE      EIE1
       000000C0H.1 SFRSYM    DATA     BIT       SMB0CN0_ACK
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 12
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 12
 
 
       000000E8H.1 SFRSYM    DATA     BIT       CLIF0_C0RIF
@@ -779,7 +779,7 @@ SYMBOL TABLE OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
       000000F0H.6 SFRSYM    DATA     BIT       B_B6
       000000C5H   SFRSYM    DATA     WORD      ADC0LT
       000000AEH   SFRSYM    DATA     BYTE      PCA0CPM3
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 13
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 13
 
 
       00000084H   SFRSYM    DATA     BYTE      PCA0CPL4
@@ -844,7 +844,7 @@ SYMBOL TABLE OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
       000000AFH   SFRSYM    DATA     BYTE      CLU0FN
       00000098H.4 SFRSYM    DATA     BIT       SCON0_REN
       000000ACH   SFRSYM    DATA     BYTE      SMB0TC
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 14
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 14
 
 
       000000F2H   SFRSYM    DATA     BYTE      P1MDIN
@@ -909,7 +909,7 @@ SYMBOL TABLE OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
       000000CCH   SFRSYM    DATA     BYTE      P2SKIP
       00000084H   SFRSYM    DATA     BYTE      CLU0MX
       000000E8H   SFRSYM    DATA     BYTE      ADC0CN0
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 15
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 15
 
 
       000000D8H.4 SFRSYM    DATA     BIT       UART1FCN1_TIE
@@ -974,7 +974,7 @@ SYMBOL TABLE OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
       000000B8H.3 SFRSYM    DATA     BIT       IP_PT1
       00000088H.3 SFRSYM    DATA     BIT       DACGCF0_D01REFSL
       000000B5H   SFRSYM    DATA     WORD      ADC0ASA
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 16
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 16
 
 
       000000E8H   SFRSYM    DATA     BYTE      CLIF0
@@ -1039,7 +1039,7 @@ SYMBOL TABLE OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
       000000B0H.7 SFRSYM    DATA     BIT       P3_B7
       00000083H   SFRSYM    DATA     BYTE      DPH
       000000C4H   SFRSYM    DATA     BYTE      ADC0GTH
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 17
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 17
 
 
       000000C8H.7 SFRSYM    DATA     BIT       TMR2CN0_TF2H
@@ -1104,7 +1104,7 @@ SYMBOL TABLE OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
       00000088H.6 SFRSYM    DATA     BIT       TCON_TR1
       000000C2H   SFRSYM    DATA     BYTE      SMB0DAT
       000000CFH   SFRSYM    DATA     BYTE      TMR2H
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 18
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 18
 
 
       000000A1H   SFRSYM    DATA     BYTE      SPI0CFG
@@ -1169,7 +1169,7 @@ SYMBOL TABLE OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
       00000097H   SFRSYM    DATA     BYTE      WDTCN
       000000A0H   SFRSYM    DATA     BYTE      P2
       000000B0H   SFRSYM    DATA     BYTE      P3
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 19
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 19
 
 
       000000B0H   SFRSYM    DATA     BIT       T0
@@ -1234,7 +1234,7 @@ SYMBOL TABLE OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
       000000DEH   SFRSYM    DATA     BYTE      PCA0CPH5
       000000D8H.7 SFRSYM    DATA     BIT       UART1FCN1_TFRQ
       000000F0H.4 SFRSYM    DATA     BIT       B_B4
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 20
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 20
 
 
       000000DBH   SFRSYM    DATA     BYTE      PCA0CPM1
@@ -1299,7 +1299,7 @@ SYMBOL TABLE OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
       000000E0H.7 SFRSYM    DATA     BIT       ACC_ACC7
       00000094H   SFRSYM    DATA     WORD      TMR3
       0000009BH   SFRSYM    DATA     BYTE      SPI0FCN1
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 21
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 21
 
 
       000000C0H.2 SFRSYM    DATA     BIT       TMR5CN0_TR5
@@ -1364,7 +1364,7 @@ SYMBOL TABLE OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
       000000A8H.1 SFRSYM    DATA     BIT       IE_ET0
       000000AAH   SFRSYM    DATA     BYTE      CMP1MX
       00000098H.1 SFRSYM    DATA     BIT       TMR4CN0_T4XCLK1
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 22
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 22
 
 
       000000A8H.3 SFRSYM    DATA     BIT       IE_ET1
@@ -1429,7 +1429,7 @@ SYMBOL TABLE OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
       000000F4H   SFRSYM    DATA     WORD      PCA0CP3
       0000008CH   SFRSYM    DATA     BYTE      TH0
       000000A2H   SFRSYM    DATA     BYTE      DACGCF2
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 23
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 23
 
 
       00000086H   SFRSYM    DATA     BYTE      CRC0CN1
@@ -1494,7 +1494,7 @@ SYMBOL TABLE OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
       00000090H.5 SFRSYM    DATA     BIT       P1_B5
       00000080H.6 SFRSYM    DATA     BIT       P0_B6
       00000098H.1 SFRSYM    DATA     BIT       DACGCF1_D1UDIS
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 24
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 24
 
 
       000000EEH   SFRSYM    DATA     BYTE      EIP1H
@@ -1559,7 +1559,7 @@ SYMBOL TABLE OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
       000000B8H.6 SFRSYM    DATA     BIT       IP_PSPI0
       000000E8H.1 SFRSYM    DATA     BIT       ADC0CN0_ADGN0
       0000009CH   SFRSYM    DATA     BYTE      PCA0CLR
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 25
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 25
 
 
       000000C0H.6 SFRSYM    DATA     BIT       TMR5CN0_TF5L
@@ -1624,7 +1624,7 @@ SYMBOL TABLE OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
       010010ACH   BLOCK     CODE     ---       LVL=0
       010010ACH   LINE      CODE     ---       #8
       010010ACH   LINE      CODE     ---       #10
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 26
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 26
 
 
       010010AFH   LINE      CODE     ---       #12
@@ -1689,7 +1689,7 @@ SYMBOL TABLE OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
       01000E95H   LINE      CODE     ---       #80
       01000E95H   LINE      CODE     ---       #81
       ---         BLOCKEND  ---      ---       LVL=0
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 27
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 27
 
 
 
@@ -1754,7 +1754,7 @@ SYMBOL TABLE OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
       00000001H   SYMBOL    DATA     ---       binptr
       ---         BLOCKEND  ---      ---       LVL=1
       01000F26H   LINE      CODE     ---       #133
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 28
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 28
 
 
       01000F26H   LINE      CODE     ---       #135
@@ -1819,7 +1819,7 @@ SYMBOL TABLE OF MODULE:  4BITPROCESSOR.OMF.CRBUILD (INITDEVICE)
       01000000H   PUBLIC    CODE     ---       ?C_STARTUP
 
       ---         MODULE    ---      ---       ?C?ILDPTR
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/03/2017  12:59:17  PAGE 29
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/07/2017  17:02:34  PAGE 29
 
 
       01000B5CH   PUBLIC    CODE     ---       ?C?ILDPTR

@@ -1,0 +1,130 @@
+AX51 MACRO ASSEMBLER  READYSETGO                                                            04/17/17 18:04:37 PAGE     1
+
+
+MACRO ASSEMBLER AX51 V3.12.0.0
+OBJECT MODULE PLACED IN .\src\readysetgo.OBJ
+ASSEMBLER INVOKED BY: Z:\Applications\Simplicity Studio.app\Contents\Eclipse\developer\toolchains\keil_8051\9.53\BIN\AX5
+                      1.exe /Users/s150563/Documents/Cooper/Semester 4/Comp_Arch/ECE251-Project1/STOPWATCH1/src/readyset
+                      go.asm ERRORPRINT SET(SMALL) DEBUG MACRO NOMOD51 INCDIR(/Applications/Simplicity Studio.app/Conten
+                      ts/Eclipse/developer/sdks/8051/v4.0.3//Device/EFM8BB3/peripheral_driver/inc;/Applications/Simplici
+                      ty Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/common/bsp;/Applications/Simplicit
+                      y Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/EFM8BB3_SLSTK2022A/config;/Applicat
+                      ions/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_m
+                      emory_lcd/inc;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kit
+                      s/common/drivers/efm8_memory_lcd/inc/graphics;/Applications/Simplicity Studio.app/Contents/Eclipse
+                      /developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc/config;/Applications/Simplici
+                      ty Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_joystick;/Appl
+                      ications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//Device/shared/si8051ba
+                      se;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//Device/EFM8BB3
+                      /inc) PRINT(.\src\readysetgo.lst) COND SYMBOLS PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src\readysetgo.OBJ) 
+
+LOC    OBJ             LINE     SOURCE
+
+                          1     $nomod51 
+                          2     ;-----------------------------------------------------------------------------
+                          3     ; SB1_blinky.ASM
+                          4     ;-----------------------------------------------------------------------------
+                          5     ;  TARGET MCU  :  EFM8SB1
+                          6     ;  DESCRIPTION :  This program illustrates how to disable the watchdog timer,
+                          7     ;                 configure the Crossbar, configure a port and write to a port
+                          8     ;                 I/O pin.
+                          9     ;
+                         10     ;       NOTES:
+                         11     ;
+                         12     ;-----------------------------------------------------------------------------
+                         13     ; EQUATES
+                         14     ;-----------------------------------------------------------------------------
+                         15     
+                         16                                                ;   '0' is Board Contoller driven
+                         17                                                ;   '1' is EFM8 driven
+                         18     ;-----------------------------------------------------------------------------
+                         19     ; RESET and INTERRUPT VECTORS
+                         20     ;-----------------------------------------------------------------------------
+                         21     
+                         22                 ; Reset Vector
+000000                   23                 cseg AT 0
+000000 020000     F      24                 ljmp Main                     ; Locate a jump to the start of
+                         25                                               ; code at the reset vector.
+                         26     
+                         27     ;-----------------------------------------------------------------------------
+                         28     ; CODE SEGMENT
+                         29     ;-----------------------------------------------------------------------------
+                         30     
+                         31     
+------                   32     Blink       segment  CODE
+                         33     
+------                   34                 rseg     Blink                ; Switch to this code segment.
+                         35                 using    0                    ; Specify register bank for the
+                         36                                               ; following program code.
+                         37     
+000000                   38     Main:
+                         39     
+                         40                 ; Enable the Port I/O Crossbar
+000000                   41                 orl   P1SKIP, #02h            ; skip LED pin in crossbar
+*** ______________________________________________^
+AX51 MACRO ASSEMBLER  READYSETGO                                                            04/17/17 18:04:37 PAGE     2
+
+*** ERROR #A45 IN 41 (\Users\s150563\Documents\Cooper\Semester 4\Comp_Arch\ECE251-Project1\STOPWATCH1\src\readysetgo.asm
+                               , LINE 41): UNDEFINED SYMBOL
+                         42     
+000003                   43                 mov   XBR2, #40h
+*** ______________________________________________^
+*** ERROR #A45 IN 43 (\Users\s150563\Documents\Cooper\Semester 4\Comp_Arch\ECE251-Project1\STOPWATCH1\src\readysetgo.asm
+                               , LINE 43): UNDEFINED SYMBOL
+000006                   44                 orl   P1MDOUT, #02h           ; make LED pin output push-pull
+*** ______________________________________________^
+*** ERROR #A45 IN 44 (\Users\s150563\Documents\Cooper\Semester 4\Comp_Arch\ECE251-Project1\STOPWATCH1\src\readysetgo.asm
+                               , LINE 44): UNDEFINED SYMBOL
+                         45     
+                         46                 ; Initialize LED to OFF
+000009                   47                 clr   P1.4
+*** ______________________________________________^
+*** ERROR #A45 IN 47 (\Users\s150563\Documents\Cooper\Semester 4\Comp_Arch\ECE251-Project1\STOPWATCH1\src\readysetgo.asm
+                               , LINE 47): UNDEFINED SYMBOL
+                         48     
+                         49                 ; Simple delay loop.
+00000B 7F03              50     Loop2:      mov   R7, #03h
+00000D 7E00              51     Loop1:      mov   R6, #00h
+00000F 7D00              52     Loop0:      mov   R5, #00h
+000011 DDFE              53                 djnz  R5, $
+000013 DEFA              54                 djnz  R6, Loop0
+000015 DFF6              55                 djnz  R7, Loop1
+000017                   56                 cpl   P1.4              ; Toggle LED
+*** ______________________________________________^
+*** ERROR #A45 IN 56 (\Users\s150563\Documents\Cooper\Semester 4\Comp_Arch\ECE251-Project1\STOPWATCH1\src\readysetgo.asm
+                               , LINE 56): UNDEFINED SYMBOL
+000019                   57                 jmp   @Loop2
+*** ______________________________________________^
+*** _______________________________________________^
+*** ERROR #A9 IN 57 (\Users\s150563\Documents\Cooper\Semester 4\Comp_Arch\ECE251-Project1\STOPWATCH1\src\readysetgo.asm,
+                                LINE 57): SYNTAX ERROR
+*** ERROR #A9 IN 57 (\Users\s150563\Documents\Cooper\Semester 4\Comp_Arch\ECE251-Project1\STOPWATCH1\src\readysetgo.asm,
+                                LINE 57): SYNTAX ERROR
+                         58     
+                         59     ;-----------------------------------------------------------------------------
+                         60     ; End of file.
+                         61     
+                         62     END
+AX51 MACRO ASSEMBLER  READYSETGO                                                            04/17/17 18:04:37 PAGE     3
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E     ATTRIBUTES
+
+BLINK. . . . . . .  C  SEG   000019H       REL=UNIT, ALN=BYTE
+LOOP0. . . . . . .  C  ADDR  000FH     R   SEG=BLINK
+LOOP1. . . . . . .  C  ADDR  000DH     R   SEG=BLINK
+LOOP2. . . . . . .  C  ADDR  000BH     R   SEG=BLINK
+MAIN . . . . . . .  C  ADDR  0000H     R   SEG=BLINK
+P1 . . . . . . . .  -- ----  -------       
+P1MDOUT. . . . . .  -- ----  -------       
+P1SKIP . . . . . .  -- ----  -------       
+XBR2 . . . . . . .  -- ----  -------       
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 7 ERROR(S).
