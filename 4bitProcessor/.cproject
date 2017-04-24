@@ -92,7 +92,12 @@
 							<option id="com.silabs.ide.si8051.keil.toolchain.category.general.extended_assembler.1755457631" name="Use Extended Assembler (AX51) instead of A51" superClass="com.silabs.ide.si8051.keil.toolchain.category.general.extended_assembler" value="true" valueType="boolean"/>
 							<option id="com.silabs.ide.si8051.keil.toolchain.category.general.extended_linker.2056082117" name="Use Extended Linker (LX51) instead of BL51" superClass="com.silabs.ide.si8051.keil.toolchain.category.general.extended_linker" value="true" valueType="boolean"/>
 							<targetPlatform binaryParser="com.silabs.ss.tool.ide.c8051.debug.OMF;com.silabs.ss.tool.ide.c8051.debug.OMF2;com.silabs.ss.framework.debugger.core.BIN;com.silabs.ss.framework.debugger.core.HEX;com.silabs.ss.framework.debugger.core.S37;com.silabs.ss.framework.debugger.core.EBL" id="com.silabs.ide.si8051.keil.targetplatform.1716574951" isAbstract="false" superClass="com.silabs.ide.si8051.keil.targetplatform"/>
-							<builder buildPath="${workspace_loc:/4bitProcessor}/Keil 8051 v9.53 - Release" id="com.silabs.ide.si8051.keil.builder.1270503429" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Keil Builder" parallelBuildOn="false" superClass="com.silabs.ide.si8051.keil.builder"/>
+							<builder buildPath="${workspace_loc:/4bitProcessor}/Keil 8051 v9.53 - Release" id="com.silabs.ide.si8051.keil.builder.1270503429" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="Keil Builder" parallelBuildOn="false" superClass="com.silabs.ide.si8051.keil.builder">
+								<outputEntries>
+									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="Keil 8051 v9.53 - Debug"/>
+									<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="outputPath" name="Keil 8051 v9.53 - Release"/>
+								</outputEntries>
+							</builder>
 							<tool id="com.silabs.ide.si8051.keil.toolchain.compiler.1766132352" name="Keil 8051 Compiler" superClass="com.silabs.ide.si8051.keil.toolchain.compiler">
 								<option id="com.silabs.ide.si8051.keil.compiler.category.optimization.level.1749465375" name="Level" superClass="com.silabs.ide.si8051.keil.compiler.category.optimization.level" value="com.silabs.ide.si8051.keil.compiler.category.optimization.level.9" valueType="enumerated"/>
 								<option id="com.silabs.ide.si8051.keil.compiler.category.symbols.def.1822139468" name="Defined symbols (DEFINE(...))" superClass="com.silabs.ide.si8051.keil.compiler.category.symbols.def" valueType="definedSymbols">
@@ -101,16 +106,19 @@
 								<option id="com.silabs.ide.si8051.keil.compiler.category.optimization.coloring.1349519074" name="Global register coloring" superClass="com.silabs.ide.si8051.keil.compiler.category.optimization.coloring" value="true" valueType="boolean"/>
 								<option id="com.silabs.ide.si8051.keil.compiler.category.optimization.emphasis.678727362" name="Emphasis" superClass="com.silabs.ide.si8051.keil.compiler.category.optimization.emphasis" value="com.silabs.ide.si8051.keil.compiler.category.optimization.emphasis.speed" valueType="enumerated"/>
 								<option id="com.silabs.ide.si8051.keil.compiler.category.includes.paths.117687077" name="Include paths (INCDIR(...))" superClass="com.silabs.ide.si8051.keil.compiler.category.includes.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${StudioSdkPath}/Device/shared/si8051base&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${StudioSdkPath}/Device/EFM8BB3/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3/Device/shared/si8051base&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3/Device/EFM8BB3/inc&quot;"/>
 								</option>
 								<inputType id="com.silabs.ide.si8051.keil.compiler.inputType.1407335242" superClass="com.silabs.ide.si8051.keil.compiler.inputType"/>
 							</tool>
 							<tool command="AX51" id="com.silabs.ide.si8051.keil.toolchain.assembler.1217010515" name="Keil 8051 Assembler" superClass="com.silabs.ide.si8051.keil.toolchain.assembler">
 								<option id="com.silabs.ide.si8051.keil.assembler.category.symbols.def.584768939" name="Defined symbols (SET(...))" superClass="com.silabs.ide.si8051.keil.assembler.category.symbols.def"/>
 								<option id="com.silabs.ide.si8051.keil.assembler.category.includes.paths.724210831" name="Include paths (INCDIR(...))" superClass="com.silabs.ide.si8051.keil.assembler.category.includes.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${StudioSdkPath}/Device/shared/si8051base&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${StudioSdkPath}/Device/EFM8BB3/inc&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3/Device/shared/si8051base&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3/Device/EFM8BB3/inc&quot;"/>
+								</option>
+								<option id="com.silabs.ide.si8051.keil.assembler.category.symbols.def2.968351780" superClass="com.silabs.ide.si8051.keil.assembler.category.symbols.def2" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="NDEBUG=1"/>
 								</option>
 								<inputType id="com.silabs.ide.si8051.keil.assembler.inputType.503563672" superClass="com.silabs.ide.si8051.keil.assembler.inputType"/>
 							</tool>
@@ -122,7 +130,6 @@
 					</folderInfo>
 					<sourceEntries>
 						<entry excluding="src" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
-						<entry flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name="src"/>
 					</sourceEntries>
 				</configuration>
 			</storageModule>
