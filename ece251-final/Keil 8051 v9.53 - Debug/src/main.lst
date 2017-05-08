@@ -1,0 +1,66 @@
+C51 COMPILER V9.53.0.0   MAIN                                                              05/07/2017 22:18:32 PAGE 1   
+
+
+C51 COMPILER V9.53.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\src/main.OBJ
+COMPILER INVOKED BY: Z:\Applications\Simplicity Studio.app\Contents\Eclipse\developer\toolchains\keil_8051\9.53\BIN\C51.
+                    -exe /Users/s150563/SimplicityStudio/v4_workspace/UARTstopwatch/src/main.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARNI
+                    -NGLEVEL(2) FLOATFUZZY(3) OPTIMIZE(8,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(/Users/s150563/Simplicity
+                    -Studio/v4_workspace/UARTstopwatch/inc/graphics;/Users/s150563/SimplicityStudio/v4_workspace/UARTstopwatch/inc;/Users/s15
+                    -0563/SimplicityStudio/v4_workspace/UARTstopwatch/inc/config;/Applications/Simplicity Studio.app/Contents/Eclipse/develop
+                    -er/sdks/8051/v4.0.3//kits/common/bsp;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//ki
+                    -ts/EFM8BB3_SLSTK2022A/config;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//Device/EFM
+                    -8BB3/peripheral_driver/inc;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/common/
+                    -drivers/efm8_joystick;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/common/drive
+                    -rs/efm8_memory_lcd/inc;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/common/driv
+                    -ers/efm8_memory_lcd/inc/graphics;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/c
+                    -ommon/drivers/efm8_memory_lcd/inc/config;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3
+                    -//Device/shared/si8051base;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//Device/EFM8B
+                    -B3/inc) PRINT(.\src/main.lst) COND PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src/main.OBJ)
+
+line level    source
+
+   1          /////////////////////////////////////////////////////////////////////////////
+   2          // Includes
+   3          /////////////////////////////////////////////////////////////////////////////
+   4          
+   5          #include "bsp.h"
+   6          #include "InitDevice.h"
+   7          #include "disp.h"
+   8          
+   9          //---------------------------------------------------------------------------
+  10          // main() Routine
+  11          // --------------------------------------------------------------------------
+  12          int main(void)
+  13          {
+  14   1        // Enter default mode
+  15   1        enter_DefaultMode_from_RESET();
+  16   1      
+  17   1        // Enable all interrupts
+  18   1        IE_EA = 1;
+  19   1      
+  20   1        DISP_Init();
+  21   1        uart_main();
+*** WARNING C206 IN LINE 21 OF /Users/s150563/SimplicityStudio/v4_workspace/UARTstopwatch/src/main.c: 'uart_main': missi
+             -ng function-prototype
+  22   1      
+  23   1        while (1);
+  24   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     13    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+   EDATA SIZE       =   ----    ----
+   HDATA SIZE       =   ----    ----
+   XDATA CONST SIZE =   ----    ----
+   FAR CONST SIZE   =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)
