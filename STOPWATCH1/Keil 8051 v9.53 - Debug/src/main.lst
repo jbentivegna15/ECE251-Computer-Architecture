@@ -1,23 +1,23 @@
-C51 COMPILER V9.53.0.0   MAIN                                                              04/24/2017 10:14:41 PAGE 1   
+C51 COMPILER V9.53.0.0   MAIN                                                              05/15/2017 11:46:41 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE MAIN
 OBJECT MODULE PLACED IN .\src/main.OBJ
 COMPILER INVOKED BY: Z:\Applications\Simplicity Studio.app\Contents\Eclipse\developer\toolchains\keil_8051\9.53\BIN\C51.
-                    -exe /Users/s150563/Documents/Cooper/Semester 4/Comp_Arch/ECE251-Project1/STOPWATCH1/src/main.c OMF2 SMALL DEBUG OBJECTEX
-                    -TEND ROM(LARGE) WARNINGLEVEL(2) FLOATFUZZY(3) OPTIMIZE(8,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(/Use
-                    -rs/s150563/Documents/Cooper/Semester 4/Comp_Arch/ECE251-Project1/STOPWATCH1/inc;/Users/s150563/Documents/Cooper/Semester
-                    - 4/Comp_Arch/ECE251-Project1/STOPWATCH1/inc/config;/Users/s150563/Documents/Cooper/Semester 4/Comp_Arch/ECE251-Project1/
-                    -STOPWATCH1/inc/graphics;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//Device/EFM8BB3/
-                    -peripheral_driver/inc;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/common/bsp;/
-                    -Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/EFM8BB3_SLSTK2022A/config;/Applicat
-                    -ions/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc;/Applica
-                    -tions/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc/graphic
-                    -s;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/i
-                    -nc/config;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_joys
-                    -tick;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//Device/shared/si8051base;/Applicat
-                    -ions/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//Device/EFM8BB3/inc) PRINT(.\src/main.lst) COND P
-                    -AGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src/main.OBJ)
+                    -exe /Users/s150563/Documents/Cooper/Comp_Arch/ECE251-Project1/STOPWATCH1/src/main.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LA
+                    -RGE) WARNINGLEVEL(2) FLOATFUZZY(3) OPTIMIZE(8,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(/Users/s150563/
+                    -Documents/Cooper/Comp_Arch/ECE251-Project1/STOPWATCH1/inc/graphics;/Users/s150563/Documents/Cooper/Comp_Arch/ECE251-Proj
+                    -ect1/STOPWATCH1/inc;/Users/s150563/Documents/Cooper/Comp_Arch/ECE251-Project1/STOPWATCH1/inc/config;/Applications/Simpli
+                    -city Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/common/bsp;/Applications/Simplicity Studio.app/Content
+                    -s/Eclipse/developer/sdks/8051/v4.0.3//kits/EFM8BB3_SLSTK2022A/config;/Applications/Simplicity Studio.app/Contents/Eclips
+                    -e/developer/sdks/8051/v4.0.3//Device/EFM8BB3/peripheral_driver/inc;/Applications/Simplicity Studio.app/Contents/Eclipse/
+                    -developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_joystick;/Applications/Simplicity Studio.app/Contents/Eclipse/devel
+                    -oper/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc;/Applications/Simplicity Studio.app/Contents/Eclipse/deve
+                    -loper/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc/graphics;/Applications/Simplicity Studio.app/Contents/Ec
+                    -lipse/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc/config;/Applications/Simplicity Studio.app/Con
+                    -tents/Eclipse/developer/sdks/8051/v4.0.3//Device/shared/si8051base;/Applications/Simplicity Studio.app/Contents/Eclipse/
+                    -developer/sdks/8051/v4.0.3//Device/EFM8BB3/inc) PRINT(.\src/main.lst) COND PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src/ma
+                    -in.OBJ)
 
 line level    source
 
@@ -28,26 +28,25 @@ line level    source
    5          #include "bsp.h"
    6          #include "InitDevice.h"
    7          #include "disp.h"
-   8          //#include "voltmeter.h"
-   9          
-  10          //---------------------------------------------------------------------------
-  11          // main() Routine
-  12          // --------------------------------------------------------------------------
-  13          int main(void)
-  14          {
-  15   1        // Enter default mode
-  16   1        enter_DefaultMode_from_RESET();
-  17   1      
-  18   1        // Enable all interrupts
-  19   1        IE_EA = 1;
-  20   1      
-  21   1        DISP_Init();
-  22   1        Stopwatch_main();
-*** WARNING C206 IN LINE 22 OF /Users/s150563/Documents/Cooper/Semester 4/Comp_Arch/ECE251-Project1/STOPWATCH1/src/main.
-             -c: 'Stopwatch_main': missing function-prototype
-  23   1      
-  24   1        while (1);
-  25   1      }
+   8          
+   9          //---------------------------------------------------------------------------
+  10          // main() Routine
+  11          // --------------------------------------------------------------------------
+  12          int main(void)
+  13          {
+  14   1        // Enter default mode
+  15   1        enter_DefaultMode_from_RESET();
+  16   1      
+  17   1        // Enable all interrupts
+  18   1        IE_EA = 1;
+  19   1      
+  20   1        DISP_Init();
+  21   1        Stopwatch_main();
+*** WARNING C206 IN LINE 21 OF /Users/s150563/Documents/Cooper/Comp_Arch/ECE251-Project1/STOPWATCH1/src/main.c: 'Stopwat
+             -ch_main': missing function-prototype
+  22   1      
+  23   1        while (1);
+  24   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
@@ -63,8 +62,6 @@ MODULE INFORMATION:   STATIC OVERLAYABLE
    XDATA CONST SIZE =   ----    ----
    FAR CONST SIZE   =   ----    ----
 END OF MODULE INFORMATION.
-
-C51 COMPILER V9.53.0.0   MAIN                                                              04/24/2017 10:14:41 PAGE 2   
 
 
 C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

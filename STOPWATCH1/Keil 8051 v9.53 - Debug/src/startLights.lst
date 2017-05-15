@@ -1,4 +1,4 @@
-AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           04/24/17 10:14:42 PAGE     1
+AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           05/10/17 22:30:01 PAGE     1
 
 
 MACRO ASSEMBLER AX51 V3.12.0.0
@@ -62,7 +62,7 @@ LOC    OBJ             LINE     SOURCE
                     +1   39     ;  EFM8BB31F64G_QFN24
                     +1   40     ;  EFM8BB31F64G_QFN32
                     +1   41     ;  EFM8BB31F64G_QFP32
-AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           04/24/17 10:14:42 PAGE     2
+AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           05/10/17 22:30:01 PAGE     2
 
                     +1   42     ;  EFM8BB31F64G_QSOP24
                     +1   43     ;  EFM8BB31F64I_4QFN24
@@ -127,7 +127,7 @@ LOC    OBJ             LINE     SOURCE
  00CB               +1  102     CRC0DAT   DATA 0CBH; CRC0 Data Output                         
  00CF               +1  103     CRC0FLIP  DATA 0CFH; CRC0 Bit Flip                            
  00CA               +1  104     CRC0IN    DATA 0CAH; CRC0 Data Input                          
-AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           04/24/17 10:14:42 PAGE     3
+AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           05/10/17 22:30:01 PAGE     3
 
  00D2               +1  105     CRC0ST    DATA 0D2H; CRC0 Automatic Flash Sector Start        
  0091               +1  106     DAC0CF0   DATA 091H; DAC0 Configuration 0                     
@@ -192,7 +192,7 @@ LOC    OBJ             LINE     SOURCE
  00D5               +1  165     P1SKIP    DATA 0D5H; Port 1 Skip                              
  00A0               +1  166     P2        DATA 0A0H; Port 2 Pin Latch                         
  00FC               +1  167     P2MASK    DATA 0FCH; Port 2 Mask                              
-AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           04/24/17 10:14:42 PAGE     4
+AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           05/10/17 22:30:01 PAGE     4
 
  00FB               +1  168     P2MAT     DATA 0FBH; Port 2 Match                             
  00F3               +1  169     P2MDIN    DATA 0F3H; Port 2 Input Mode                        
@@ -257,7 +257,7 @@ LOC    OBJ             LINE     SOURCE
  00C4               +1  228     SMB0FCN1  DATA 0C4H; SMBus 0 FIFO Control 1                   
  00EF               +1  229     SMB0FCT   DATA 0EFH; SMBus 0 FIFO Count                       
  00C5               +1  230     SMB0RXLN  DATA 0C5H; SMBus 0 Receive Length Counter           
-AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           04/24/17 10:14:42 PAGE     5
+AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           05/10/17 22:30:01 PAGE     5
 
  00AC               +1  231     SMB0TC    DATA 0ACH; SMBus 0 Timing and Pin Control           
  0093               +1  232     SMOD1     DATA 093H; UART1 Mode                               
@@ -322,7 +322,7 @@ LOC    OBJ             LINE     SOURCE
  00C5               +1  291     ADC0LT  DATA 0C5H ; ADC0 Less-Than Low Byte              
  0082               +1  292     DP      DATA 082H ; Data Pointer Low                     
  00FB               +1  293     PCA0CP0 DATA 0FBH ; PCA Channel 0 Capture Module Low Byte
-AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           04/24/17 10:14:42 PAGE     6
+AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           05/10/17 22:30:01 PAGE     6
 
  00E9               +1  294     PCA0CP1 DATA 0E9H ; PCA Channel 1 Capture Module Low Byte
  00EB               +1  295     PCA0CP2 DATA 0EBH ; PCA Channel 2 Capture Module Low Byte
@@ -387,7 +387,7 @@ LOC    OBJ             LINE     SOURCE
  00E8.6             +1  354     CLIF0_C3FIF BIT CLIF0.6 ; CLU3 Falling Edge Flag
  00E8.7             +1  355     CLIF0_C3RIF BIT CLIF0.7 ; CLU3 Rising Edge Flag 
                     +1  356     
-AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           04/24/17 10:14:42 PAGE     7
+AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           05/10/17 22:30:01 PAGE     7
 
                     +1  357     ; DACGCF0 0x88 (DAC Global Configuration 0)
  0088.0             +1  358     DACGCF0_D1SRC0   BIT DACGCF0.0 ; DAC1 Data Source Bit 0                
@@ -452,7 +452,7 @@ LOC    OBJ             LINE     SOURCE
  00A0.4             +1  417     P2_B4 BIT P2.4 ; Port 2 Bit 4 Latch
  00A0.5             +1  418     P2_B5 BIT P2.5 ; Port 2 Bit 5 Latch
  00A0.6             +1  419     P2_B6 BIT P2.6 ; Port 2 Bit 6 Latch
-AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           04/24/17 10:14:42 PAGE     8
+AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           05/10/17 22:30:01 PAGE     8
 
                     +1  420     
                     +1  421     ; P3 0xB0 (Port 3 Pin Latch)
@@ -517,7 +517,7 @@ LOC    OBJ             LINE     SOURCE
  00F8.2             +1  480     SPI0CN0_NSSMD0 BIT SPI0CN0.2 ; Slave Select Mode Bit 0
  00F8.3             +1  481     SPI0CN0_NSSMD1 BIT SPI0CN0.3 ; Slave Select Mode Bit 1
  00F8.4             +1  482     SPI0CN0_RXOVRN BIT SPI0CN0.4 ; Receive Overrun Flag   
-AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           04/24/17 10:14:42 PAGE     9
+AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           05/10/17 22:30:01 PAGE     9
 
  00F8.5             +1  483     SPI0CN0_MODF   BIT SPI0CN0.5 ; Mode Fault Flag        
  00F8.6             +1  484     SPI0CN0_WCOL   BIT SPI0CN0.6 ; Write Collision Flag   
@@ -582,7 +582,7 @@ LOC    OBJ             LINE     SOURCE
  0003               +1  543     TIMER1_IRQn  EQU 3  ; Timer 1 Overflow          
  0004               +1  544     UART0_IRQn   EQU 4  ; UART0                     
  0005               +1  545     TIMER2_IRQn  EQU 5  ; Timer 2 Overflow / Capture
-AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           04/24/17 10:14:42 PAGE    10
+AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           05/10/17 22:30:01 PAGE    10
 
  0006               +1  546     SPI0_IRQn    EQU 6  ; SPI0                      
  0007               +1  547     SMBUS0_IRQn  EQU 7  ; SMBus 0                   
@@ -647,7 +647,7 @@ LOC    OBJ             LINE     SOURCE
                         605     
 000326                  606     setLightsOFF:
                         607             USING   0
-AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           04/24/17 10:14:42 PAGE    11
+AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           05/10/17 22:30:01 PAGE    11
 
 000326 D294             608             SETB    P1_B4
 000328 D295             609             SETB    P1_B5
@@ -678,7 +678,7 @@ LOC    OBJ             LINE     SOURCE
 000030 22               634             RET
                         635     
                         636     END
-AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           04/24/17 10:14:42 PAGE    12
+AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           05/10/17 22:30:01 PAGE    12
 
 SYMBOL TABLE LISTING
 ------ ----- -------
@@ -743,7 +743,7 @@ CKCON0. . . . . . . . . . . . . . . .  D  ADDR  008EH     A
 CKCON1. . . . . . . . . . . . . . . .  D  ADDR  00A6H     A   
 CL0_IRQN. . . . . . . . . . . . . . .  N  NUMB  0013H     A   
 CLEN0 . . . . . . . . . . . . . . . .  D  ADDR  00C6H     A   
-AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           04/24/17 10:14:42 PAGE    13
+AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           05/10/17 22:30:01 PAGE    13
 
 CLIE0 . . . . . . . . . . . . . . . .  D  ADDR  00C7H     A   
 CLIF0 . . . . . . . . . . . . . . . .  D  ADDR  00E8H     A   
@@ -808,7 +808,7 @@ DACGCF0_D1AMEN. . . . . . . . . . . .  B  ADDR  0088H.2   A
 DACGCF0_D1SRC0. . . . . . . . . . . .  B  ADDR  0088H.0   A   
 DACGCF0_D1SRC1. . . . . . . . . . . .  B  ADDR  0088H.1   A   
 DACGCF0_D23REFSL. . . . . . . . . . .  B  ADDR  0088H.7   A   
-AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           04/24/17 10:14:42 PAGE    14
+AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           05/10/17 22:30:01 PAGE    14
 
 DACGCF0_D3AMEN. . . . . . . . . . . .  B  ADDR  0088H.6   A   
 DACGCF0_D3SRC0. . . . . . . . . . . .  B  ADDR  0088H.4   A   
@@ -873,7 +873,7 @@ LFO0CN. . . . . . . . . . . . . . . .  D  ADDR  00B1H     A
 NEXT. . . . . . . . . . . . . . . . .  C  ADDR  0302H     R   SEG=?CO?STARTLIGHTS?0
 P0. . . . . . . . . . . . . . . . . .  D  ADDR  0080H     A   
 P0_B0 . . . . . . . . . . . . . . . .  B  ADDR  0080H.0   A   
-AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           04/24/17 10:14:42 PAGE    15
+AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           05/10/17 22:30:01 PAGE    15
 
 P0_B1 . . . . . . . . . . . . . . . .  B  ADDR  0080H.1   A   
 P0_B2 . . . . . . . . . . . . . . . .  B  ADDR  0080H.2   A   
@@ -938,7 +938,7 @@ PCA0CN0_CF. . . . . . . . . . . . . .  B  ADDR  00D8H.7   A
 PCA0CN0_CR. . . . . . . . . . . . . .  B  ADDR  00D8H.6   A   
 PCA0CP0 . . . . . . . . . . . . . . .  D  ADDR  00FBH     A   
 PCA0CP1 . . . . . . . . . . . . . . .  D  ADDR  00E9H     A   
-AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           04/24/17 10:14:42 PAGE    16
+AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           05/10/17 22:30:01 PAGE    16
 
 PCA0CP2 . . . . . . . . . . . . . . .  D  ADDR  00EBH     A   
 PCA0CP3 . . . . . . . . . . . . . . .  D  ADDR  00F4H     A   
@@ -1003,7 +1003,7 @@ SCON0_RI. . . . . . . . . . . . . . .  B  ADDR  0098H.0   A
 SCON0_SMODE . . . . . . . . . . . . .  B  ADDR  0098H.7   A   
 SCON0_TB8 . . . . . . . . . . . . . .  B  ADDR  0098H.3   A   
 SCON0_TI. . . . . . . . . . . . . . .  B  ADDR  0098H.1   A   
-AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           04/24/17 10:14:42 PAGE    17
+AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           05/10/17 22:30:01 PAGE    17
 
 SCON1 . . . . . . . . . . . . . . . .  D  ADDR  00C8H     A   
 SCON1_OVR . . . . . . . . . . . . . .  B  ADDR  00C8H.7   A   
@@ -1068,7 +1068,7 @@ TCON_IT1. . . . . . . . . . . . . . .  B  ADDR  0088H.2   A
 TCON_TF0. . . . . . . . . . . . . . .  B  ADDR  0088H.5   A   
 TCON_TF1. . . . . . . . . . . . . . .  B  ADDR  0088H.7   A   
 TCON_TR0. . . . . . . . . . . . . . .  B  ADDR  0088H.4   A   
-AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           04/24/17 10:14:42 PAGE    18
+AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           05/10/17 22:30:01 PAGE    18
 
 TCON_TR1. . . . . . . . . . . . . . .  B  ADDR  0088H.6   A   
 TH0 . . . . . . . . . . . . . . . . .  D  ADDR  008CH     A   
@@ -1133,7 +1133,7 @@ TMR5CN0_TF5L. . . . . . . . . . . . .  B  ADDR  00C0H.6   A
 TMR5CN0_TF5LEN. . . . . . . . . . . .  B  ADDR  00C0H.5   A   
 TMR5CN0_TR5 . . . . . . . . . . . . .  B  ADDR  00C0H.2   A   
 TMR5CN1 . . . . . . . . . . . . . . .  D  ADDR  00F1H     A   
-AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           04/24/17 10:14:42 PAGE    19
+AX51 MACRO ASSEMBLER  STARTLIGHTS                                                           05/10/17 22:30:01 PAGE    19
 
 TMR5H . . . . . . . . . . . . . . . .  D  ADDR  00D5H     A   
 TMR5L . . . . . . . . . . . . . . . .  D  ADDR  00D4H     A   
