@@ -19,7 +19,7 @@
     <image src='Documentation/imgs/stopwatch.jpg' height='300'></image>
   </a>
 
-<h2>4 Bit Processor</h2>
+<h2>4 Bit Processor:</h2>
   <p><a href="https://goo.gl/photos/PaqLfEYfPowHR43n9">demo video (binary up/down count)</a></p>
   <a href="https://goo.gl/photos/PaqLfEYfPowHR43n9">
     <image src='Documentation/imgs/4bitprocessor.jpg' height='300'></image>
