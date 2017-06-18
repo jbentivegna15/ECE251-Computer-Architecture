@@ -1,0 +1,67 @@
+C51 COMPILER V9.53.0.0   MAIN                                                              05/10/2017 23:02:37 PAGE 1   
+
+
+C51 COMPILER V9.53.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\src/main.OBJ
+COMPILER INVOKED BY: Z:\Applications\Simplicity Studio.app\Contents\Eclipse\developer\toolchains\keil_8051\9.53\BIN\C51.
+                    -exe /Users/s150563/Documents/Cooper/Semester 4/Comp_Arch/ECE251-Project1/STOPWATCH1/src/main.c OMF2 SMALL DEBUG OBJECTEX
+                    -TEND ROM(LARGE) WARNINGLEVEL(2) FLOATFUZZY(3) OPTIMIZE(9,SPEED) DEFINE(NDEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(/Us
+                    -ers/s150563/Documents/Cooper/Semester 4/Comp_Arch/ECE251-Project1/STOPWATCH1/inc/graphics;/Users/s150563/Documents/Coope
+                    -r/Semester 4/Comp_Arch/ECE251-Project1/STOPWATCH1/inc;/Users/s150563/Documents/Cooper/Semester 4/Comp_Arch/ECE251-Projec
+                    -t1/STOPWATCH1/inc/config;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/common/bs
+                    -p;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/EFM8BB3_SLSTK2022A/config;/Appli
+                    -cations/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//Device/EFM8BB3/peripheral_driver/inc;/Applica
+                    -tions/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_joystick;/Applications
+                    -/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc;/Application
+                    -s/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc/graphics;/A
+                    -pplications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc/c
+                    -onfig;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//Device/shared/si8051base;/Applica
+                    -tions/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//Device/EFM8BB3/inc) REGFILE(STOPWATCH1.ORC) PRI
+                    -NT(.\src/main.lst) COND PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src/main.OBJ)
+
+line level    source
+
+   1          /////////////////////////////////////////////////////////////////////////////
+   2          // Includes
+   3          /////////////////////////////////////////////////////////////////////////////
+   4          
+   5          #include "bsp.h"
+   6          #include "InitDevice.h"
+   7          #include "disp.h"
+   8          
+   9          //---------------------------------------------------------------------------
+  10          // main() Routine
+  11          // --------------------------------------------------------------------------
+  12          int main(void)
+  13          {
+  14   1        // Enter default mode
+  15   1        enter_DefaultMode_from_RESET();
+  16   1      
+  17   1        // Enable all interrupts
+  18   1        IE_EA = 1;
+  19   1      
+  20   1        DISP_Init();
+  21   1        Stopwatch_main();
+*** WARNING C206 IN LINE 21 OF /Users/s150563/Documents/Cooper/Semester 4/Comp_Arch/ECE251-Project1/STOPWATCH1/src/main.
+             -c: 'Stopwatch_main': missing function-prototype
+  22   1      
+  23   1        while (1);
+  24   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     13    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+   EDATA SIZE       =   ----    ----
+   HDATA SIZE       =   ----    ----
+   XDATA CONST SIZE =   ----    ----
+   FAR CONST SIZE   =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)

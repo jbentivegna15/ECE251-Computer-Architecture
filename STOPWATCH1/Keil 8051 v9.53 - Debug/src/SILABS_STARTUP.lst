@@ -1,4 +1,4 @@
-AX51 MACRO ASSEMBLER  SILABS_STARTUP                                                        04/23/17 19:55:56 PAGE     1
+AX51 MACRO ASSEMBLER  SILABS_STARTUP                                                        05/10/17 22:30:00 PAGE     1
 
 
 MACRO ASSEMBLER AX51 V3.12.0.0
@@ -62,7 +62,7 @@ LOC    OBJ             LINE     SOURCE
                          40     ; <o> PDATASTART: PDATA memory start address <0x0-0xFFFF> 
                          41     ;     <i> The absolute start address of PDATA memory
  0000                    42     PDATASTART      EQU     0H
-AX51 MACRO ASSEMBLER  SILABS_STARTUP                                                        04/23/17 19:55:56 PAGE     2
+AX51 MACRO ASSEMBLER  SILABS_STARTUP                                                        05/10/17 22:30:00 PAGE     2
 
                          43     ;
                          44     ; <o> PDATALEN: PDATA memory size <0x0-0xFF> 
@@ -127,7 +127,7 @@ LOC    OBJ             LINE     SOURCE
                         103     ; </e>
                         104     ;------------------------------------------------------------------------------
                         105     
-AX51 MACRO ASSEMBLER  SILABS_STARTUP                                                        04/23/17 19:55:56 PAGE     3
+AX51 MACRO ASSEMBLER  SILABS_STARTUP                                                        05/10/17 22:30:00 PAGE     3
 
                         106     ; Standard SFR Symbols 
  00E0                   107     ACC     DATA    0E0H
@@ -192,7 +192,7 @@ LOC    OBJ             LINE     SOURCE
                                                 CLR     A
                                 PDATALOOP:      MOVX    @R0,A
                                                 INC     R0
-AX51 MACRO ASSEMBLER  SILABS_STARTUP                                                        04/23/17 19:55:56 PAGE     4
+AX51 MACRO ASSEMBLER  SILABS_STARTUP                                                        05/10/17 22:30:00 PAGE     4
 
                                                 DJNZ    R7,PDATALOOP
                                 ENDIF
@@ -230,7 +230,7 @@ LOC    OBJ             LINE     SOURCE
 000009 020000     E     201                     LJMP    ?C_START
                         202     
                         203                     END
-AX51 MACRO ASSEMBLER  SILABS_STARTUP                                                        04/23/17 19:55:56 PAGE     5
+AX51 MACRO ASSEMBLER  SILABS_STARTUP                                                        05/10/17 22:30:00 PAGE     5
 
 SYMBOL TABLE LISTING
 ------ ----- -------

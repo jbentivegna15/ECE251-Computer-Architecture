@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="ASCII"?>
-<device:XMLDevice name="EFM8BB31F64G-A-QFN32" partId="mcu.8051.efm8.bb3.efm8bb31f64g-a-qfn32" xmlns:device="http://www.silabs.com/ss/hwconfig/document/device.ecore" xmlns:xmi="http://www.omg.org/XMI" xmi:version="2.0">
+<device:XMLDevice xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:device="http://www.silabs.com/ss/hwconfig/document/device.ecore" name="EFM8BB31F64G-A-QFN32" partId="mcu.8051.efm8.bb3.efm8bb31f64g-a-qfn32" version="4.0.1">
   <mode name="DefaultMode">
     <property object="ADC14_0" propertyId="ABPeripheral.included" value="true"/>
     <property object="ADC14_0" propertyId="adc14.clockconfiguration.adcclockdivider" value="2"/>
     <property object="ADC14_0" propertyId="adc14.control.startofconversion" value="Timer 0 overflow"/>
     <property object="ADC14_0" propertyId="adc14.enable.enableadc" value="Enabled"/>
     <property object="ADC14_0" propertyId="adc14.inputselection.positiveinputselection" value="ADC0.13 (P1.7)"/>
+    <property object="ADC14_0" propertyId="adc14.powercontrol.enablelowpowermode" value="Enabled"/>
     <property object="ADC14_0" propertyId="adc14.throughput.conversiontrackingtimesetting" value="1"/>
     <property object="ADC14_0" propertyId="adc14.view.view" value="Advanced"/>
     <property object="ADC14_0" propertyId="adc14.voltagereference.selectvoltagereference" value="VDD pin"/>
@@ -90,7 +91,7 @@
     <property object="WDT_0" propertyId="wdt.watchdogcontrol.wdtenable" value="Disable"/>
   </mode>
   <modeTransition>
-    <property object="RESET &#8594; DefaultMode" propertyId="modeTransition.target" value="DefaultMode"/>
-    <property object="RESET &#8594; DefaultMode" propertyId="modeTransition.source" value="RESET"/>
+    <property object="RESET &#x2192; DefaultMode" propertyId="modeTransition.source" value="RESET"/>
+    <property object="RESET &#x2192; DefaultMode" propertyId="modeTransition.target" value="DefaultMode"/>
   </modeTransition>
 </device:XMLDevice>

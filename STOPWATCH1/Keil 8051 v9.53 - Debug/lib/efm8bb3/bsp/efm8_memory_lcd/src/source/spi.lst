@@ -1,4 +1,4 @@
-C51 COMPILER V9.53.0.0   SPI                                                               04/23/2017 19:55:58 PAGE 1   
+C51 COMPILER V9.53.0.0   SPI                                                               05/10/2017 22:30:02 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE SPI
@@ -63,7 +63,7 @@ line level    source
   39          {
   40   1        uint8_t sfrPageSave;
   41   1        uint8_t i;
-C51 COMPILER V9.53.0.0   SPI                                                               04/23/2017 19:55:58 PAGE 2   
+C51 COMPILER V9.53.0.0   SPI                                                               05/10/2017 22:30:02 PAGE 2   
 
   42   1      
   43   1        // Wait for previous transfer to complete
@@ -128,7 +128,7 @@ line level    source
  102   1        // Stop timer
  103   1        TMR2CN0 &= ~TMR2CN0_TR2__BMASK;
  104   1      
-C51 COMPILER V9.53.0.0   SPI                                                               04/23/2017 19:55:58 PAGE 3   
+C51 COMPILER V9.53.0.0   SPI                                                               05/10/2017 22:30:02 PAGE 3   
 
  105   1        // CS setup complete
  106   1        if (TransferState == ST_CS_SETUP)

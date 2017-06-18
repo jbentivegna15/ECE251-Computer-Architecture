@@ -1,23 +1,23 @@
-C51 COMPILER V9.53.0.0   STOPWATCH                                                         04/24/2017 10:14:42 PAGE 1   
+C51 COMPILER V9.53.0.0   STOPWATCH                                                         05/15/2017 11:46:41 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE STOPWATCH
 OBJECT MODULE PLACED IN .\src/stopwatch.OBJ
 COMPILER INVOKED BY: Z:\Applications\Simplicity Studio.app\Contents\Eclipse\developer\toolchains\keil_8051\9.53\BIN\C51.
-                    -exe /Users/s150563/Documents/Cooper/Semester 4/Comp_Arch/ECE251-Project1/STOPWATCH1/src/stopwatch.c OMF2 SMALL DEBUG OBJ
-                    -ECTEXTEND ROM(LARGE) WARNINGLEVEL(2) FLOATFUZZY(3) OPTIMIZE(8,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR
-                    -(/Users/s150563/Documents/Cooper/Semester 4/Comp_Arch/ECE251-Project1/STOPWATCH1/inc;/Users/s150563/Documents/Cooper/Sem
-                    -ester 4/Comp_Arch/ECE251-Project1/STOPWATCH1/inc/config;/Users/s150563/Documents/Cooper/Semester 4/Comp_Arch/ECE251-Proj
-                    -ect1/STOPWATCH1/inc/graphics;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//Device/EFM
-                    -8BB3/peripheral_driver/inc;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/common/
-                    -bsp;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/EFM8BB3_SLSTK2022A/config;/App
-                    -lications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc;/Ap
-                    -plications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc/gr
-                    -aphics;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_
-                    -lcd/inc/config;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8
-                    -_joystick;/Applications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//Device/shared/si8051base;/App
-                    -lications/Simplicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//Device/EFM8BB3/inc) PRINT(.\src/stopwatch.l
-                    -st) COND PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src/stopwatch.OBJ)
+                    -exe /Users/s150563/Documents/Cooper/Comp_Arch/ECE251-Project1/STOPWATCH1/src/stopwatch.c OMF2 SMALL DEBUG OBJECTEXTEND R
+                    -OM(LARGE) WARNINGLEVEL(2) FLOATFUZZY(3) OPTIMIZE(8,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(/Users/s15
+                    -0563/Documents/Cooper/Comp_Arch/ECE251-Project1/STOPWATCH1/inc/graphics;/Users/s150563/Documents/Cooper/Comp_Arch/ECE251
+                    --Project1/STOPWATCH1/inc;/Users/s150563/Documents/Cooper/Comp_Arch/ECE251-Project1/STOPWATCH1/inc/config;/Applications/S
+                    -implicity Studio.app/Contents/Eclipse/developer/sdks/8051/v4.0.3//kits/common/bsp;/Applications/Simplicity Studio.app/Co
+                    -ntents/Eclipse/developer/sdks/8051/v4.0.3//kits/EFM8BB3_SLSTK2022A/config;/Applications/Simplicity Studio.app/Contents/E
+                    -clipse/developer/sdks/8051/v4.0.3//Device/EFM8BB3/peripheral_driver/inc;/Applications/Simplicity Studio.app/Contents/Ecl
+                    -ipse/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_joystick;/Applications/Simplicity Studio.app/Contents/Eclipse/
+                    -developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc;/Applications/Simplicity Studio.app/Contents/Eclipse
+                    -/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc/graphics;/Applications/Simplicity Studio.app/Conten
+                    -ts/Eclipse/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc/config;/Applications/Simplicity Studio.ap
+                    -p/Contents/Eclipse/developer/sdks/8051/v4.0.3//Device/shared/si8051base;/Applications/Simplicity Studio.app/Contents/Ecl
+                    -ipse/developer/sdks/8051/v4.0.3//Device/EFM8BB3/inc) PRINT(.\src/stopwatch.lst) COND PAGEWIDTH(120) PAGELENGTH(65) OBJEC
+                    -T(.\src/stopwatch.OBJ)
 
 line level    source
 
@@ -63,7 +63,7 @@ line level    source
   40          uint8_t start_track;
   41          
   42          ///////////////////////////////////////////////////////////////////////////////
-C51 COMPILER V9.53.0.0   STOPWATCH                                                         04/24/2017 10:14:42 PAGE 2   
+C51 COMPILER V9.53.0.0   STOPWATCH                                                         05/15/2017 11:46:41 PAGE 2   
 
   43          // Supporting Functions
   44          //////////////////////////////////////////////////////////////////////////////
@@ -128,7 +128,7 @@ line level    source
  102   2              str[pos] = (t % 10) + '0';
  103   2      
  104   2              // Shift number by 1 decimal place to the right
-C51 COMPILER V9.53.0.0   STOPWATCH                                                         04/24/2017 10:14:42 PAGE 3   
+C51 COMPILER V9.53.0.0   STOPWATCH                                                         05/15/2017 11:46:41 PAGE 3   
 
  105   2              t /= 10;
  106   2              count+=1;
@@ -193,7 +193,7 @@ line level    source
  165   1              start_track = 0;
  166   1      }
  167          
-C51 COMPILER V9.53.0.0   STOPWATCH                                                         04/24/2017 10:14:42 PAGE 4   
+C51 COMPILER V9.53.0.0   STOPWATCH                                                         05/15/2017 11:46:41 PAGE 4   
 
  168          ///////////////////////////////////////////////////////////////////////////////
  169          // Interrupt Service Routines
@@ -236,7 +236,7 @@ line level    source
  206   2         }
  207   1      }
  208          
- 209          extern void start(void);
+ 209          extern void start(void); //function written in assembly file "startLights.A51"
  210          
  211          ///////////////////////////////////////////////////////////////////////////////
  212          // Driver Function
@@ -258,7 +258,7 @@ line level    source
  228   2      
  229   2                      if((start_track == 1) && (IE_EX0 == 0)){ //IF GOING FROM TIMER0 OFF -> TIMER0 ON
  230   3                              IE_ET0 = 0; //FORCE TIMER0 TO STOP DURING LIGHTS
-C51 COMPILER V9.53.0.0   STOPWATCH                                                         04/24/2017 10:14:42 PAGE 5   
+C51 COMPILER V9.53.0.0   STOPWATCH                                                         05/15/2017 11:46:41 PAGE 5   
 
  231   3                              start(); //STARTUP LIGHTS
  232   3                              IE_ET0 = 1; //ALLOW TIMER0 TO CONTINUE
